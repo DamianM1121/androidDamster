@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Settings    -->
+    <color name="settings_text_title_color">#FFFFFF</color> <!-- Blanco para el título en modo oscuro -->
+    <color name="settings_subtext_title_color">#B0B0B0</color> <!-- Gris claro para el subtítulo en modo oscuro -->
+
+</resources>

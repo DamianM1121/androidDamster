@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background_app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="imcCalculator.ResultImcActivity">
+
+    <TextView
+        android:id="@+id/txTitulo"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu resultado:"
+        android:textStyle="bold"
+        android:textColor="@color/title_text"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnReCalular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txTitulo" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "Rango de peso"
+                android:textSize="32dp"
+                android:textColor="@color/title_text"/>
+            <TextView
+                android:id="@+id/txImcResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "Rango de peso"
+                android:textAlignment="center"
+                android:textSize="75dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginVertical="75dp"/>
+            <TextView
+                android:id="@+id/txImcDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "Rango de peso"
+                android:textSize="32dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnReCalular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re-Calcular:"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/background_component"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

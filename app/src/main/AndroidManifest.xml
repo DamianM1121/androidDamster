@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidDamster"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity1.superHeoresApp.superHeroHistory.SuperHeroRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity1.settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Settings" />
+        <activity
+            android:name=".activity1.superHeoresApp.superHeroHistory.DetailSuperHeroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity1.superHeoresApp.SuperHeroListActivity"
+            android:exported="false" /> <!-- TaskCategory -->
+        <activity
+            android:name=".activity1.todoapp.TasksViewHolder"
+            android:exported="false" /> <!-- CategoriesViewHolder -->
+        <activity
+            android:name=".activity1.todoapp.CategoriesViewHolder"
+            android:exported="false" /> <!-- CategoriesAdapter -->
+        <activity
+            android:name=".activity1.todoapp.CategoriesAdapter"
+            android:exported="false" /> <!-- TodoAppActivity -->
+        <activity
+            android:name=".activity1.todoapp.TodoappActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TODOApp" /> <!-- ACTIVIDAD DE IMC CALCULATOR -->
+        <activity
+            android:name="imcCalculator.ResultImcActivity"
+            android:exported="false" /> <!-- ACTIVIDAD DE MenuApp -->
+        <activity
+            android:name="imcCalculator.ImcCalculatorActivity"
+            android:exported="false" /> <!-- Pantalla de Inicio Main y Launcher -->
+        <activity
+            android:name=".activity1.MenuApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ACTIVIDAD DE PrimeraApp2 -->
+        <activity
+            android:name=".activity1.primeraApp2"
+            android:exported="false" /> <!-- ACTIVIDAD DE PrimeraApp -->
+        <activity
+            android:name=".activity1.primeraApp"
+            android:exported="false" />
+    </application>
+
+</manifest>

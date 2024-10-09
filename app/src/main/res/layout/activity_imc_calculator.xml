@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="32dp"
+    tools:context="imcCalculator.ImcCalculatorActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/male"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/background_component_selected"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/Female"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:src="@drawable/ic_female"
+                app:tint="@color/white">
+
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Woman"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/title_text"
+                android:textSize="20sp"></TextView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Female"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/black"
+        app:cardBackgroundColor="@color/background_component_selected"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/male"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:src="@drawable/ic_male"
+                app:tint="@color/white">
+
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Men"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/title_text"
+                android:textSize="20sp"></TextView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAltura"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foregroundGravity="center"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Female">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/weightScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altura"
+                android:textAllCaps="true"
+                android:textColor="@color/title_text" />
+
+            <TextView
+                android:id="@+id/txHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120"
+                android:textColor="@color/white"
+                android:textSize="100sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="150"
+                android:valueTo="210" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/yearsOld"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcularIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/WeightButton"
+        app:layout_constraintTop_toBottomOf="@+id/cvAltura">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edad"
+                android:textAlignment="center"
+                android:textColor="@color/title_text" />
+
+            <TextView
+                android:id="@+id/txYearsOld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_text"
+                android:textSize="42sp"
+                tools:text="20" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_plusYearsOld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/button_background"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_minumYearsOld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button_background"
+                    android:src="@drawable/ic_minum"
+                    app:tint="@color/white" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/WeightButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcularIMC"
+        app:layout_constraintEnd_toStartOf="@+id/yearsOld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvAltura">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textAlignment="center"
+                android:textColor="@color/title_text" />
+
+            <TextView
+                android:id="@+id/txWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_text"
+                android:textSize="42sp"
+                tools:text="60" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_plusWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/button_background"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_minumWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button_background"
+                    android:src="@drawable/ic_minum"
+                    app:tint="@color/white" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCalcularIMC"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="Calcular"
+        android:textColor="@color/title_text"
+        android:backgroundTint="@color/background_component"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WeightButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity1.settings.SettingsActivity">
+
+    <!--base de accion de settings-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SettingsContainer">
+
+        <!--icono de modo oscuro    -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/ic_dark_mode" />
+
+        <!--layout de titulo y subtitulo        -->
+        <LinearLayout
+            style="@style/SettingsTitleAndSubtitleLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!--Titulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title_dark_mode"
+                android:theme="@style/SettingsTitleText" />
+
+            <!--Subtitulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_subtitle_dark_mode"
+                android:theme="@style/SettingsSubtitleText" />
+
+        </LinearLayout>
+
+        <!--    Switch-->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SettingsContainer">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/ic_bluetooth" />
+
+        <LinearLayout
+            style="@style/SettingsTitleAndSubtitleLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <!--Titulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title_bluetooth"
+                android:theme="@style/SettingsTitleText" />
+
+            <!--Subtitulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_subtitle_bluetooth"
+                android:theme="@style/SettingsSubtitleText" />
+
+        </LinearLayout>
+
+        <!--    Switch-->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        style="@style/SettingsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/ic_volume" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/SettingsTitleAndSubtitleLayout">
+
+
+            <!--Titulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title_volume"
+                android:theme="@style/SettingsTitleText" />
+
+            <!--RangeSlider            -->
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+
+        </LinearLayout>
+
+        <!--    Switch-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SettingsContainer">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/ic_vibration" />
+
+        <LinearLayout
+            style="@style/SettingsTitleAndSubtitleLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <!--Titulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title_vibrator"
+                android:theme="@style/SettingsTitleText" />
+
+            <!--Subtitulo-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_subtitle_vibrator"
+                android:theme="@style/SettingsSubtitleText" />
+
+        </LinearLayout>
+
+        <!--    Switch-->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchVibrator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

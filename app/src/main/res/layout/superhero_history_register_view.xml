@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    tools:cardBackgroundColor="@color/black">
+
+    <!-- Imagen a la izquierda -->
+    <ImageView
+        android:id="@+id/ivHeroRegister"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        tools:src="@drawable/ic_volume"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!--layout del nombre    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <!--Nombre del heroe-->
+            <TextView
+                android:id="@+id/tvHeroNameRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                tools:text="Nombre super"
+                android:background="@color/background_black_opacity_60"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <!--Fecha de Consulta-->
+            <TextView
+                android:id="@+id/tvHeroNameDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                tools:text="Fecha de consulta"
+                android:background="@color/background_black_opacity_60"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

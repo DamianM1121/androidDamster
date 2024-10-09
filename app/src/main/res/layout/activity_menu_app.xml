@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity1.MenuApp">
+  <!--Boton de SaludApp-->
+  <Button
+      android:id="@+id/btnSaludApp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="SaludApp"/>
+  <!--Boton de ImcCalculator-->
+  <Button
+      android:id="@+id/btnImcCalculator"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="Imc Calculator"/>
+  <Button
+      android:id="@+id/btnTodoApp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="Todo App"/>
+  <Button
+      android:id="@+id/btnSuperHeroes"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="@string/super_heroes_list_app_button_menu"/>
+  <Button
+      android:id="@+id/btnSettings"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="@string/settings_menu_call_button"/>
+  <Button
+      android:id="@+id/btnSuperHeroRegister"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:text="@string/superherohistory_button_access"/>
+  </LinearLayout>
